@@ -1,0 +1,22 @@
+# Engines have several properties (see   
+# http://cawiki.ca.com/display/Platform/Platform+Programming+Model):
+
+name: myhelloworld
+display_name: "myhelloworld"
+packaging: tomcat7          # osgi or spring
+ 
+tenant_routes:
+   -
+     path: "/:tenant/hw1"
+     servicePath: "/HelloWorld/:postFix"
+   -
+     path: "/:tenant/hw2"
+     servicePath: "/HelloWorld2/:postFix"
+#     path: "/:tenant/HelloWorld"
+#     path: "/demo/myhelloworld/:tenant"
+
+uses_onode: false           # default false
+uses_pop_services: false    # default false
+is_tenant_spi: false
+ose_scalable: true          # Can this app be scaled?
+ose_ha: true                # if Scalable do you want to be full HA?  [deploys 2 HAProxies and minimum of 2 instances of the app]

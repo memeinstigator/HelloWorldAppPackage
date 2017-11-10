@@ -1,4 +1,6 @@
-#test 123:#README for SlotMinder Sample App package
+#Red Hat OpenShift Project
+
+README for SlotMinder Sample App package
 
 This is an sample CA platform app (per http://cawiki.ca.com/display/Platform/The+Platform+Programming+Model )
 
